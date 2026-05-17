@@ -1,5 +1,4 @@
 :root {
-    /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     --primary: #ff6a3e;
     --primaryLight: #ffba43;
     --secondary: #ffba43;
@@ -7,15 +6,21 @@
     --headerColor: #1a1a1a;
     --bodyTextColor: #4e4b66;
     --bodyTextColorWhite: #fafbfc;
-    /* 13px - 16px */
+
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
-    /* 31px - 49px */
     --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
     --bodyFontSize: 1rem;
-    /* 60px - 100px top and bottom */
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
 }
 
+/* Basic reset used across the whole site */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Main page defaults */
 body {
     margin: 0;
     padding: 0;
@@ -23,42 +28,38 @@ body {
     overflow-x: hidden;
 }
 
-*,
-*:before,
-*:after {
-    /* prevents padding from affecting height and width */
-    box-sizing: border-box;
-}
-
+/* CodeStitch default small heading style */
 .cs-topper {
-    font-size: var(--topperFontSize);
-    line-height: 1.2em;
-    text-transform: uppercase;
-    text-align: inherit;
-    letter-spacing: .1em;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 0.25rem;
     display: block;
+    margin-bottom: 0.25rem;
+    color: var(--primary);
+    font-size: var(--topperFontSize);
+    font-weight: 700;
+    line-height: 1.2em;
+    letter-spacing: 0.1em;
+    text-align: inherit;
+    text-transform: uppercase;
 }
 
+/* CodeStitch default title style */
 .cs-title {
+    position: relative;
+    max-width: 43.75rem;
+    margin: 0 0 1rem;
+    color: var(--headerColor);
     font-size: var(--headerFontSize);
     font-weight: 900;
     line-height: 1.2em;
     text-align: inherit;
-    max-width: 43.75rem;
-    margin: 0 0 1rem 0;
-    color: var(--headerColor);
-    position: relative;
 }
 
+/* CodeStitch default paragraph style */
 .cs-text {
-    font-size: var(--bodyFontSize);
-    line-height: 1.5em;
-    text-align: inherit;
     width: 100%;
     max-width: 40.625rem;
     margin: 0;
     color: var(--bodyTextColor);
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
 }

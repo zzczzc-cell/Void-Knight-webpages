@@ -18,9 +18,6 @@
 </head>
 
 <body>
-    <!-- Hidden main heading for document structure -->
-    <h1 hidden>Void Knight Website</h1>
-
     <!-- Fixed top navigation bar -->
     <header class="site-header">
         <nav class="site-nav" aria-label="Main navigation">
@@ -47,7 +44,7 @@
     </header>
 
     <!-- Section 1: Hero section -->
-    <section id="hero-1785" aria-labelledby="hero-heading">
+    <section id="hero-1785" role="region" aria-labelledby="hero-heading">
         <!-- Main hero background image -->
         <img src="Images/homepage/Upper%20background.png" alt="" class="upper-background" aria-hidden="true">
 
@@ -85,7 +82,7 @@
     </section>
 
     <!-- Section 2: Announcement section -->
-    <section id="about" aria-label="Game announcements">
+    <section id="about" role="region" aria-label="Game announcements">
         <div class="about-container">
             <!-- Left title images for the announcement area -->
             <div class="announcement-left">
@@ -103,26 +100,28 @@
                     <!-- Text placed inside the frame -->
                     <div class="announcement-frame-content">
                         <div class="announcement-years">
-                            <a href="#">2026</a>
-                            <a href="#">2025</a>
-                            <a href="#">2024</a>
-                            <a href="#">2023</a>
-                            <a href="#">More</a>
+                            <a href="#" data-year="2026" class="year-is-active">2026</a>
+                            <a href="#" data-year="2025">2025</a>
+                            <a href="#" data-year="2024">2024</a>
+                            <a href="#" data-year="2023">2023</a>
+                            <a href="#" data-year="more">More</a>
                         </div>
 
                         <div class="announcement-list">
                             <div class="announcement-item">
-                                <p>VOID KNIGHT PATCH 5 TRADITIONAL CHINESE, GERMAN UPDATES &amp; MORE</p>
+                                <p class="announcement-text">VOID KNIGHT PATCH 5 TRADITIONAL CHINESE, GERMAN UPDATES
+                                    &amp; MORE</p>
                                 <a href="#">Read More</a>
                             </div>
 
                             <div class="announcement-item">
-                                <p>VOID KNIGHT ARRIVES ON NINTENDO SWITCH 2, PS5 &amp; XBOX SERIES X|S</p>
+                                <p class="announcement-text">VOID KNIGHT ARRIVES ON NINTENDO SWITCH 2, PS5 &amp; XBOX
+                                    SERIES X|S</p>
                                 <a href="#">Read More</a>
                             </div>
 
                             <div class="announcement-item">
-                                <p>NEW EXPANSION, WORLD REFRESH, AND MORE CONTENT UPDATES!</p>
+                                <p class="announcement-text">NEW EXPANSION, WORLD REFRESH, AND MORE CONTENT UPDATES!</p>
                                 <a href="#">Read More</a>
                             </div>
                         </div>
@@ -138,7 +137,7 @@
     </section>
 
     <!-- Section 3: Game features section -->
-    <section id="features" class="content-section features-section" aria-labelledby="features-heading">
+    <section id="features" class="content-section features-section" role="region" aria-labelledby="features-heading">
         <div class="section-container">
             <p class="section-topper">Game Features</p>
             <h2 id="features-heading" class="section-title">Enter a ruined underground kingdom</h2>
@@ -175,7 +174,8 @@
     </section>
 
     <!-- Section 4: About team section -->
-    <section id="about-team" class="content-section about-team-section" aria-labelledby="about-team-heading">
+    <section id="about-team" class="content-section about-team-section" role="region"
+        aria-labelledby="about-team-heading">
         <div class="section-container about-team-container">
             <!-- Team introduction text -->
             <div class="about-team-text">
@@ -232,7 +232,7 @@
         </div>
     </footer>
 
-    <!-- External JavaScript file for image hover effects -->
+    <!-- External JavaScript file for all page interactions -->
     <script src="script.js"></script>
 </body>
 
