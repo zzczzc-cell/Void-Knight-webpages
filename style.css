@@ -1,0 +1,569 @@
+/* Basic reset for all elements */
+* {
+    box-sizing: border-box;
+}
+
+/* Smooth movement when clicking navigation links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Main page setup */
+body {
+    margin: 0;
+    background: #000;
+    overflow-x: hidden;
+}
+
+/* Make images easier to control */
+img {
+    display: block;
+    height: auto;
+}
+
+/* Hero section */
+#hero-1785 {
+    position: relative;
+    overflow: hidden;
+    background: #000;
+}
+
+#hero-1785 .upper-background,
+#hero-1785 .black-border {
+    width: 100%;
+}
+
+/* Places hero content over the background image */
+#hero-1785 .cs-container {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+#hero-1785 .cs-content {
+    width: 100%;
+    max-width: 70rem;
+    text-align: center;
+}
+
+/* Moves the whole title group into the correct visual position */
+#hero-1785 .game-title-group {
+    transform: translate(-20rem, 13rem);
+}
+
+#hero-1785 .game-title {
+    width: 65rem;
+    max-width: 95vw;
+    margin: 0 auto 1.5rem;
+    transform: translate(3rem, -3rem);
+}
+
+#hero-1785 .game-intro {
+    max-width: 42rem;
+    margin: 0 auto 2rem;
+    color: white;
+    text-align: center;
+    transform: translate(3rem, -18rem);
+}
+
+#hero-1785 .game-intro h2 {
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 4vw, 4rem);
+}
+
+#hero-1785 .game-intro p {
+    margin: 0;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+/* Download and Learn More image buttons */
+#hero-1785 .game-action-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transform: translate(5rem, -25rem);
+}
+
+#hero-1785 .learn-more {
+    width: clamp(12rem, 22vw, 30rem);
+}
+
+#hero-1785 .download {
+    width: clamp(10rem, 18vw, 30rem);
+}
+
+/* Decorative black border at the top of the hero */
+#hero-1785 .black-border {
+    object-fit: cover;
+    object-position: center;
+    pointer-events: none;
+}
+
+#hero-1785 .top-black-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    height: 8rem;
+    transform: scaleY(-1);
+}
+
+/* Fixed navigation bar */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    height: 7rem;
+    background: #000;
+}
+
+.site-nav,
+.nav-logo-group {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav {
+    width: 100%;
+    height: 100%;
+    padding: 0 3rem;
+    gap: 3rem;
+}
+
+.nav-logo-group {
+    margin-left: auto;
+    gap: 0.5rem;
+}
+
+/* Shared font style for navigation and announcement links */
+.nav-link,
+#about .announcement-years a,
+#about .announcement-item a {
+    color: white;
+    font-family: "Lobster", Georgia, "Caveat", cursive;
+    font-weight: 700;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.nav-link {
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.bar {
+    height: 4.2rem;
+}
+
+.teamapple-logo {
+    height: 5rem;
+    object-fit: contain;
+}
+
+/* Announcement section */
+#about {
+    position: relative;
+    min-height: 100vh;
+    padding: 6rem 1rem;
+    overflow: hidden;
+    background: #050505;
+    color: white;
+}
+
+/* Blurred background image for the announcement section */
+#about::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: url("Images/homepage/Lower%20background.png") center top / 100% auto no-repeat;
+    filter: blur(0.5px);
+    transform: scale(1.02);
+    pointer-events: none;
+}
+
+#about .about-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: clamp(3rem, 0vw, 8rem);
+    width: 100%;
+    transform: translate(0rem, 2rem);
+}
+
+#about .announcement-left,
+#about .announcement-right {
+    display: flex;
+    flex-direction: column;
+}
+
+#about .announcement-left {
+    align-items: flex-start;
+}
+
+#about .announcement-right {
+    align-items: center;
+    flex-shrink: 0;
+    transform: translate(0rem, 5rem);
+}
+
+#about .whats-happening {
+    width: clamp(16rem, 30vw, 36rem);
+    margin-bottom: 1rem;
+}
+
+#about .announcement {
+    width: clamp(18rem, 35vw, 42rem);
+}
+
+/* Frame that holds the announcement text */
+#about .announcement-frame-panel {
+    position: relative;
+    flex-shrink: 0;
+    width: clamp(38rem, 46vw, 60rem);
+}
+
+#about .announcement-frame-border {
+    width: 100%;
+    height: clamp(20rem, 24vw, 40rem);
+}
+
+/* Text placed on top of the frame image */
+#about .announcement-frame-content {
+    position: absolute;
+    inset: 0;
+    padding: 1.5rem 3rem 2rem;
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+#about .announcement-years {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.2rem, 3vw, 4rem);
+    margin: 0 0 clamp(2rem, 4vw, 4rem) 2.4rem;
+}
+
+#about .announcement-years a,
+#about .announcement-item a {
+    text-decoration: underline;
+}
+
+#about .announcement-years a {
+    font-size: clamp(1rem, 1.5vw, 1.7rem);
+}
+
+#about .announcement-list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 3vw, 3rem);
+}
+
+#about .announcement-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: clamp(1.5rem, 3vw, 3rem);
+}
+
+#about .announcement-item p {
+    margin: 0;
+    font-size: clamp(0.85rem, 1.35vw, 1.45rem);
+    line-height: 1.35;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+#about .announcement-item a {
+    font-size: clamp(1rem, 1.7vw, 1.9rem);
+}
+
+#about .announcement-learn-more {
+    width: clamp(10rem, 24vw, 36rem);
+    transform: translate(-1rem, -7rem);
+}
+
+/* Shared style for the third and fourth content sections */
+.content-section {
+    position: relative;
+    padding: 7rem 2rem;
+    overflow: hidden;
+    background: #050505;
+    color: white;
+}
+
+.section-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+/* Small heading above the main title */
+.section-topper {
+    margin: 0 0 1rem;
+    color: var(--primaryLight);
+    font-family: "Lobster", Georgia, "Caveat", cursive;
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    font-style: italic;
+}
+
+.section-title {
+    max-width: 50rem;
+    margin: 0 0 1.5rem;
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2.5rem, 4vw, 5rem);
+    line-height: 1.05;
+}
+
+.section-text {
+    max-width: 50rem;
+    margin: 0;
+    color: #f5f5f5;
+    font-size: clamp(1rem, 1.3vw, 1.4rem);
+    line-height: 1.6;
+}
+
+/* Background image for the Game Features section */
+.features-section {
+    --section-bg: url("Images/homepage/Section%203%20background.png");
+}
+
+/* Background image for the About Team section */
+.about-team-section {
+    --section-bg: url("Images/homepage/Section%204%20background.png");
+    background: #000;
+}
+
+/* Blurred background layer for sections 3 and 4 */
+.features-section::before,
+.about-team-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: var(--section-bg) center center / cover no-repeat;
+    filter: blur(0.5px);
+    transform: scale(1.02);
+    opacity: 0.82;
+    pointer-events: none;
+}
+
+/* Dark overlay so the text is easier to read */
+.features-section::after,
+.about-team-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.62);
+    pointer-events: none;
+}
+
+/* Card grid layout */
+.feature-grid,
+.team-card-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.feature-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.team-card-grid {
+    grid-template-columns: repeat(3, minmax(12rem, 1fr));
+    width: 100%;
+}
+
+/* Shared card style */
+.feature-card,
+.team-card {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background: rgba(0, 0, 0, 0.58);
+}
+
+.feature-card {
+    min-height: 16rem;
+    padding: 2rem;
+    border: 0.28rem solid rgba(255, 255, 255, 0.36);
+}
+
+.team-card {
+    min-height: 15rem;
+    padding: 1.8rem;
+    border: 0.15rem solid rgba(255, 255, 255, 0.22);
+}
+
+/* Blurred image layer inside each card */
+.feature-card::before,
+.team-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image: var(--card-bg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: blur(0.5px);
+    transform: scale(1.08);
+    opacity: 0.82;
+}
+
+/* Dark layer on top of the card image */
+.feature-card::after,
+.team-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.64);
+}
+
+/* Keeps the card text above the image and overlay */
+.card-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Background images for the feature cards */
+.feature-explore {
+    --card-bg: url("Images/homepage/Explorer.png");
+}
+
+.feature-fight {
+    --card-bg: url("Images/homepage/Fight.png");
+}
+
+.feature-discover {
+    --card-bg: url("Images/homepage/Discover.png");
+}
+
+/* Background images for the team cards */
+.team-world-design {
+    --card-bg: url("Images/homepage/World%20design.png");
+}
+
+.team-character-art {
+    --card-bg: url("Images/homepage/Character%20art.png");
+}
+
+.team-game-feel {
+    --card-bg: url("Images/homepage/Game%20feel.png");
+}
+
+/* Shared card text style */
+.feature-card h3,
+.team-card h3 {
+    margin: 0 0 1rem;
+    color: var(--primaryLight);
+    font-family: "Lobster", Georgia, "Caveat", cursive;
+    font-style: italic;
+}
+
+.feature-card h3 {
+    font-size: clamp(2rem, 2.5vw, 3.5rem);
+}
+
+.team-card h3 {
+    font-size: clamp(1.8rem, 2.2vw, 3rem);
+}
+
+.feature-card p,
+.team-card p {
+    margin: 0;
+    color: white;
+    line-height: 1.5;
+}
+
+.feature-card p {
+    font-size: clamp(1rem, 1.2vw, 1.3rem);
+}
+
+.team-card p {
+    font-size: clamp(1rem, 1.15vw, 1.25rem);
+}
+
+/* About Team section layout */
+.about-team-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+.about-team-text {
+    max-width: 42rem;
+    flex-shrink: 0;
+}
+
+/* Footer area */
+.site-footer {
+    padding: 2rem 2rem 2.5rem;
+    background: #000;
+    color: white;
+}
+
+.site-footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    max-width: 90rem;
+    margin: 0 auto;
+}
+
+.site-footer .footer-left {
+    max-width: 42rem;
+}
+
+.site-footer .footer-left p,
+.site-footer .footer-copy {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+.site-footer .footer-left p {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.site-footer .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.site-footer .more-contact {
+    width: 18rem;
+    object-fit: contain;
+}
